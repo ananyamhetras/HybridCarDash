@@ -913,9 +913,9 @@ svg {
   }
 }
 
-/* iPad/tablet landscape fix */
+/* tablet landscape fix — keep 2x2, just compress */
 
-@media (orientation: landscape) and (max-height: 820px) {
+@media (orientation: landscape) and (min-width: 721px) and (max-height: 820px) {
   body {
     overflow: hidden;
   }
@@ -924,179 +924,179 @@ svg {
     width: 100vw;
     height: 100dvh;
     overflow: hidden;
-    padding: 0 clamp(18px, 3vw, 34px) 16px;
+    padding: 0 clamp(18px, 3vw, 34px) 14px;
   }
 
   .topBar {
-    height: 54px;
-    flex-shrink: 0;
+    height: 52px;
   }
 
   .overviewScreen {
-    height: calc(100dvh - 54px - 16px);
+    height: calc(100dvh - 52px - 14px);
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
   }
 
   .primaryGrid {
-    max-width: 1080px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    max-width: 760px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .primaryTile {
-    min-height: 178px;
-    padding: 12px;
-    border-radius: 14px;
+    min-height: 150px;
+    max-height: 160px;
+    padding: 10px;
+    border-radius: 13px;
+    overflow: hidden;
   }
 
   .tileIcon {
-    width: 38px;
-    height: 38px;
-    border-radius: 12px;
-    margin-bottom: 8px;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    margin-bottom: 6px;
   }
 
   .primaryTile h2 {
-    font-size: 0.86rem;
+    font-size: 0.82rem;
   }
 
   .primaryTile p {
-    font-size: 0.68rem;
-    line-height: 1.2;
+    font-size: 0.62rem;
+    line-height: 1.15;
   }
 
   .dashboardMini {
-    margin-top: 10px;
-    gap: 8px;
+    margin-top: 8px;
+    gap: 6px;
   }
 
   .controlLine {
-    grid-template-columns: 24px 1fr;
-    gap: 7px;
+    grid-template-columns: 22px 1fr;
+    gap: 6px;
   }
 
   .controlLine strong {
-    font-size: 0.62rem;
-    margin-bottom: 3px;
+    font-size: 0.58rem;
+    margin-bottom: 2px;
   }
 
   .routeMini,
   .driverPreview {
-    grid-template-columns: 28px 1fr auto;
-    gap: 7px;
-    padding: 7px;
-    margin-top: 7px;
-    border-radius: 10px;
+    padding: 6px;
+    margin-top: 6px;
+    gap: 6px;
+    grid-template-columns: 24px 1fr auto;
   }
 
   .routeMini span,
   .driverPreview span {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
   }
 
   .routeMini strong,
   .driverPreview strong {
-    font-size: 0.75rem;
+    font-size: 0.68rem;
   }
 
   .routeMini p,
   .driverPreview p {
-    font-size: 0.62rem;
+    font-size: 0.56rem;
   }
 
   .callerCircle {
-    width: 46px;
-    height: 46px;
-    margin: 10px auto 6px;
+    width: 42px;
+    height: 42px;
+    margin: 8px auto 4px;
   }
 
   .callActions {
-    gap: 18px;
-    margin-top: 10px;
+    gap: 16px;
+    margin-top: 8px;
   }
 
   .callDot {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
   }
 
   .presetTop {
-    grid-template-columns: 38px 1fr auto;
-    gap: 8px;
+    grid-template-columns: 34px 1fr auto;
+    gap: 7px;
   }
 
-  .weather {
-    font-size: 0.68rem;
-  }
-
+  .weather,
   .addProfile {
-    margin-top: 8px;
-    font-size: 0.7rem;
+    font-size: 0.62rem;
   }
 
   .supportDock {
-    max-width: 1080px;
-    min-height: 88px;
+    max-width: 760px;
+    min-height: 54px;
+  }
+
+  .supportDock.open {
+    min-height: 100px;
   }
 
   .supportStrip {
-    min-height: 44px;
+    min-height: 42px;
   }
 
   .supportStrip span {
-    min-height: 30px;
+    min-height: 28px;
   }
 
   .expandedSupportPanel {
-    padding: 8px;
+    padding: 7px;
   }
 
   .expandedPanelHeader {
-    margin-bottom: 6px;
-    font-size: 0.72rem;
+    margin-bottom: 5px;
+    font-size: 0.68rem;
   }
 
   .expandedPanelHeader button,
   .collapseButton {
-    padding: 4px 10px;
-    font-size: 0.68rem;
+    padding: 4px 9px;
+    font-size: 0.64rem;
   }
 
   .moduleGrid {
     grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .moduleTile {
-    min-height: 64px;
-    padding: 6px;
-    border-radius: 9px;
-  }
-
-  .moduleHeader {
     gap: 5px;
   }
 
+  .moduleTile {
+    min-height: 58px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .moduleHeader {
+    gap: 4px;
+  }
+
   .moduleHeader span {
-    width: 19px;
-    height: 19px;
-    border-radius: 6px;
+    width: 17px;
+    height: 17px;
+    border-radius: 5px;
   }
 
   .moduleHeader h3 {
-    font-size: 0.52rem;
+    font-size: 0.48rem;
   }
 
   .moduleTile p {
-    font-size: 0.48rem;
-    line-height: 1.1;
-    margin-top: 3px;
+    font-size: 0.44rem;
+    line-height: 1.05;
+    margin-top: 2px;
   }
 
   .moduleTile strong {
-    font-size: 0.54rem;
+    font-size: 0.5rem;
     margin-top: 2px;
   }
 }
