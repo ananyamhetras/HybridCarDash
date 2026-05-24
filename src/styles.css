@@ -912,3 +912,191 @@ svg {
     grid-template-columns: 1fr;
   }
 }
+
+/* iPad/tablet landscape fix */
+
+@media (orientation: landscape) and (max-height: 820px) {
+  body {
+    overflow: hidden;
+  }
+
+  .app {
+    width: 100vw;
+    height: 100dvh;
+    overflow: hidden;
+    padding: 0 clamp(18px, 3vw, 34px) 16px;
+  }
+
+  .topBar {
+    height: 54px;
+    flex-shrink: 0;
+  }
+
+  .overviewScreen {
+    height: calc(100dvh - 54px - 16px);
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .primaryGrid {
+    max-width: 1080px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .primaryTile {
+    min-height: 178px;
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .tileIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+  }
+
+  .primaryTile h2 {
+    font-size: 0.86rem;
+  }
+
+  .primaryTile p {
+    font-size: 0.68rem;
+    line-height: 1.2;
+  }
+
+  .dashboardMini {
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .controlLine {
+    grid-template-columns: 24px 1fr;
+    gap: 7px;
+  }
+
+  .controlLine strong {
+    font-size: 0.62rem;
+    margin-bottom: 3px;
+  }
+
+  .routeMini,
+  .driverPreview {
+    grid-template-columns: 28px 1fr auto;
+    gap: 7px;
+    padding: 7px;
+    margin-top: 7px;
+    border-radius: 10px;
+  }
+
+  .routeMini span,
+  .driverPreview span {
+    width: 24px;
+    height: 24px;
+  }
+
+  .routeMini strong,
+  .driverPreview strong {
+    font-size: 0.75rem;
+  }
+
+  .routeMini p,
+  .driverPreview p {
+    font-size: 0.62rem;
+  }
+
+  .callerCircle {
+    width: 46px;
+    height: 46px;
+    margin: 10px auto 6px;
+  }
+
+  .callActions {
+    gap: 18px;
+    margin-top: 10px;
+  }
+
+  .callDot {
+    width: 28px;
+    height: 28px;
+  }
+
+  .presetTop {
+    grid-template-columns: 38px 1fr auto;
+    gap: 8px;
+  }
+
+  .weather {
+    font-size: 0.68rem;
+  }
+
+  .addProfile {
+    margin-top: 8px;
+    font-size: 0.7rem;
+  }
+
+  .supportDock {
+    max-width: 1080px;
+    min-height: 88px;
+  }
+
+  .supportStrip {
+    min-height: 44px;
+  }
+
+  .supportStrip span {
+    min-height: 30px;
+  }
+
+  .expandedSupportPanel {
+    padding: 8px;
+  }
+
+  .expandedPanelHeader {
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+  }
+
+  .expandedPanelHeader button,
+  .collapseButton {
+    padding: 4px 10px;
+    font-size: 0.68rem;
+  }
+
+  .moduleGrid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .moduleTile {
+    min-height: 64px;
+    padding: 6px;
+    border-radius: 9px;
+  }
+
+  .moduleHeader {
+    gap: 5px;
+  }
+
+  .moduleHeader span {
+    width: 19px;
+    height: 19px;
+    border-radius: 6px;
+  }
+
+  .moduleHeader h3 {
+    font-size: 0.52rem;
+  }
+
+  .moduleTile p {
+    font-size: 0.48rem;
+    line-height: 1.1;
+    margin-top: 3px;
+  }
+
+  .moduleTile strong {
+    font-size: 0.54rem;
+    margin-top: 2px;
+  }
+}
