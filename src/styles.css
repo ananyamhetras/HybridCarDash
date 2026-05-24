@@ -1000,3 +1000,121 @@ svg {
     padding: 28px;
   }
 }
+
+/* restore overview tiles in iPad landscape */
+
+@media (orientation: landscape) and (min-width: 721px) and (max-height: 820px) {
+  .overviewScreen {
+    height: calc(100dvh - 58px - clamp(16px, 2.5vw, 28px));
+    justify-content: center;
+    gap: clamp(14px, 2vh, 20px);
+  }
+
+  .overviewScreen .primaryGrid {
+    max-width: 760px;
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: clamp(14px, 2vw, 18px);
+  }
+
+  .overviewScreen .primaryTile {
+    min-height: clamp(190px, 24vh, 230px);
+    max-height: none;
+    padding: clamp(14px, 2vw, 18px);
+    border-radius: 16px;
+    overflow: visible;
+  }
+
+  .overviewScreen .tileIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+  }
+
+  .overviewScreen .primaryTile h2 {
+    font-size: 1rem;
+  }
+
+  .overviewScreen .primaryTile p {
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
+  .overviewScreen .dashboardMini {
+    margin-top: 18px;
+    gap: 12px;
+  }
+
+  .overviewScreen .controlLine {
+    grid-template-columns: 30px 1fr;
+    gap: 10px;
+  }
+
+  .overviewScreen .controlLine strong {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+  }
+
+  .overviewScreen .routeMini,
+  .overviewScreen .driverPreview {
+    grid-template-columns: 36px 1fr auto;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .overviewScreen .routeMini span,
+  .overviewScreen .driverPreview span {
+    width: 30px;
+    height: 30px;
+  }
+
+  .overviewScreen .routeMini strong,
+  .overviewScreen .driverPreview strong {
+    font-size: 0.95rem;
+  }
+
+  .overviewScreen .routeMini p,
+  .overviewScreen .driverPreview p {
+    font-size: 0.8rem;
+  }
+
+  .overviewScreen .callerCircle {
+    width: 64px;
+    height: 64px;
+    margin: 16px auto 10px;
+  }
+
+  .overviewScreen .callActions {
+    gap: 28px;
+    margin-top: 18px;
+  }
+
+  .overviewScreen .callDot {
+    width: 34px;
+    height: 34px;
+  }
+
+  .overviewScreen .presetTop {
+    grid-template-columns: 50px 1fr auto;
+    gap: 12px;
+  }
+
+  .overviewScreen .weather,
+  .overviewScreen .addProfile {
+    font-size: inherit;
+  }
+
+  .overviewScreen .supportDock {
+    max-width: 1080px;
+    min-height: 118px;
+  }
+
+  .overviewScreen .supportStrip {
+    min-height: 52px;
+  }
+
+  .overviewScreen .supportStrip span {
+    min-height: 34px;
+  }
+}
