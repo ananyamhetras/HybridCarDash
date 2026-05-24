@@ -548,7 +548,7 @@ svg {
 .navGrid,
 .callScreen,
 .presetLayout {
-  margin-bottom: 40px;
+  margin-bottom: 48px;
 }
 
 .detailGrid {
@@ -678,7 +678,7 @@ svg {
 
 .callScreen {
   max-width: 820px;
-  margin: 32px auto 40px;
+  margin: 32px auto 48px;
   padding: 48px;
   border: 2px solid #b8c4d8;
   border-radius: 18px;
@@ -902,188 +902,101 @@ svg {
   }
 }
 
-/* tablet landscape fix — keep 2x2, just compress */
+/* iPad/tablet landscape detail-page fix */
+/* This only affects pages opened after clicking the four overview tiles. */
 
 @media (orientation: landscape) and (min-width: 721px) and (max-height: 820px) {
-  .app {
-    width: 100vw;
-    height: 100dvh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 clamp(18px, 3vw, 34px) 14px;
+  .backButton {
+    margin: 14px 0 10px;
+    padding: 9px 14px;
   }
 
-  .topBar {
-    height: 52px;
+  .screenTitle {
+    font-size: 2rem;
+    margin-bottom: 12px;
   }
 
-  .overviewScreen {
-    height: calc(100dvh - 52px - 14px);
-    justify-content: center;
-    gap: 10px;
+  .subtext {
+    margin-top: -6px;
+    margin-bottom: 14px;
+    font-size: 0.85rem;
   }
 
-  .primaryGrid {
-    max-width: 760px;
+  .detailGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
+    gap: 14px;
   }
 
-  .primaryTile {
+  .detailCard {
     min-height: 150px;
-    max-height: 160px;
-    padding: 10px;
-    border-radius: 13px;
-    overflow: hidden;
+    padding: 16px;
   }
 
-  .tileIcon {
-    width: 34px;
-    height: 34px;
-    border-radius: 10px;
-    margin-bottom: 6px;
+  .detailHeader {
+    gap: 12px;
+    margin-bottom: 18px;
   }
 
-  .primaryTile h2 {
-    font-size: 0.82rem;
-  }
-
-  .primaryTile p {
-    font-size: 0.62rem;
-    line-height: 1.15;
-  }
-
-  .dashboardMini {
-    margin-top: 8px;
-    gap: 6px;
-  }
-
-  .controlLine {
-    grid-template-columns: 22px 1fr;
-    gap: 6px;
-  }
-
-  .controlLine strong {
-    font-size: 0.58rem;
-    margin-bottom: 2px;
-  }
-
-  .routeMini,
-  .driverPreview {
-    padding: 6px;
-    margin-top: 6px;
-    gap: 6px;
-    grid-template-columns: 24px 1fr auto;
-  }
-
-  .routeMini span,
-  .driverPreview span {
-    width: 22px;
-    height: 22px;
-  }
-
-  .routeMini strong,
-  .driverPreview strong {
-    font-size: 0.68rem;
-  }
-
-  .routeMini p,
-  .driverPreview p {
-    font-size: 0.56rem;
-  }
-
-  .callerCircle {
+  .detailHeader span {
     width: 42px;
     height: 42px;
-    margin: 8px auto 4px;
   }
 
-  .callActions {
-    gap: 16px;
-    margin-top: 8px;
+  .detailHeader p {
+    font-size: 0.7rem;
   }
 
-  .callDot {
-    width: 26px;
-    height: 26px;
+  .detailHeader h2 {
+    font-size: 1.8rem;
   }
 
-  .presetTop {
-    grid-template-columns: 34px 1fr auto;
-    gap: 7px;
+  .presetLayout {
+    grid-template-columns: 240px 1fr;
+    gap: 18px;
   }
 
-  .weather,
-  .addProfile {
-    font-size: 0.62rem;
+  .driverOption,
+  .addDriver {
+    min-height: 68px;
+    padding: 10px;
   }
 
-  .supportDock {
-    max-width: 760px;
-    min-height: 54px;
+  .driverOption strong {
+    font-size: 0.9rem;
   }
 
-  .supportDock.open {
+  .driverOption p {
+    font-size: 0.75rem;
+  }
+
+  .presetCards {
+    gap: 10px;
+  }
+
+  .presetCard {
+    min-height: 88px;
+    padding: 12px;
+  }
+
+  .presetCard p {
+    font-size: 0.65rem;
+  }
+
+  .presetCard h3 {
+    font-size: 1.15rem;
+  }
+
+  .navGrid {
+    gap: 12px;
+  }
+
+  .bigRoute {
     min-height: 100px;
+    padding: 12px;
   }
 
-  .supportStrip {
-    min-height: 42px;
-  }
-
-  .supportStrip span {
-    min-height: 28px;
-  }
-
-  .expandedSupportPanel {
-    padding: 7px;
-  }
-
-  .expandedPanelHeader {
-    margin-bottom: 5px;
-    font-size: 0.68rem;
-  }
-
-  .expandedPanelHeader button,
-  .collapseButton {
-    padding: 4px 9px;
-    font-size: 0.64rem;
-  }
-
-  .moduleGrid {
-    grid-template-columns: repeat(8, minmax(0, 1fr));
-    gap: 5px;
-  }
-
-  .moduleTile {
-    min-height: 58px;
-    padding: 5px;
-    border-radius: 8px;
-  }
-
-  .moduleHeader {
-    gap: 4px;
-  }
-
-  .moduleHeader span {
-    width: 17px;
-    height: 17px;
-    border-radius: 5px;
-  }
-
-  .moduleHeader h3 {
-    font-size: 0.48rem;
-  }
-
-  .moduleTile p {
-    font-size: 0.44rem;
-    line-height: 1.05;
-    margin-top: 2px;
-  }
-
-  .moduleTile strong {
-    font-size: 0.5rem;
-    margin-top: 2px;
+  .callScreen {
+    margin: 18px auto 48px;
+    padding: 28px;
   }
 }
